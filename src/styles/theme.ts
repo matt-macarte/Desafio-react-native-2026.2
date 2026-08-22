@@ -1,7 +1,6 @@
 export const theme = {
 	colors: {
-		bgGradient: ["#0E182C", "#2E5092"] as const,
-		bgSolid: "#0E182C",
+		background: "#0E182C",
 
 		card: "#FBF5E9",
 		primary: "#E0E06E",
@@ -11,6 +10,11 @@ export const theme = {
 		textSecondary: "#2828b6",
 		muted: "#A8A8B3",
 	},
+
+	gradients: {
+		bgGradient: ["#0E182C", "#2E5092"] as const,
+	},
+
 	spacing: { sm: 8, md: 16, lg: 24 },
 
 	fonts: {
