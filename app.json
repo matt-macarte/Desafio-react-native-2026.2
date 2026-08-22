@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Desafio-react-native-2026-2",
-    "slug": "Desafio-react-native-2026-2",
+    "slug": "rotineiro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,14 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.macsmacs.rotineiro",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.macsmacs.rotineiro"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +42,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c1dc4f6b-3127-4dfc-8687-8ca13642fb8b"
+      }
+    },
+    "owner": "macs-macs"
   }
 }
