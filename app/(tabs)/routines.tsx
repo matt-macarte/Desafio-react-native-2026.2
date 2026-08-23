@@ -1,18 +1,27 @@
 import { Text } from "@/src/components/Text";
 import { theme } from "@/src/styles/theme";
-import { View } from "react-native";
+import { Feather } from "@expo/vector-icons";
+import { ScrollView, View } from "react-native";
 
 export default function Routines() {
 	return (
-		<View
-			style={{
+		<ScrollView
+			contentContainerStyle={{
 				backgroundColor: theme.colors.background,
-				padding: theme.spacing.md,
+				padding: theme.spacing.d,
+				flex: 1,
+				gap: theme.spacing.e,
 			}}
 		>
-			<Text variant="headingLg">Rotinas</Text>
+			<View>
+				<Text variant="h1">Rotinas</Text>
 
-			<Text variant="bodySm">Todas suas rotinas</Text>
-		</View>
+				<Text variant="p">Todas suas rotinas aqui</Text>
+			</View>
+			<View>
+				<Feather name="moon" size={18} color={theme.colors.primary} />
+				<Text variant="p">Todas suas rotinas aqui</Text>
+			</View>
+		</ScrollView>
 	);
 }

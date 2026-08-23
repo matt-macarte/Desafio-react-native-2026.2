@@ -1,27 +1,73 @@
 import { Text } from "@/src/components/Text";
 import { theme } from "@/src/styles/theme";
+import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
-import { View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 export default function Index() {
 	return (
 		<LinearGradient
 			colors={theme.gradients.bgGradient}
-			start={{ x: 1, y: 0 }} // Início (90deg aprox -> horizontal)
-			end={{ x: 1, y: 1 }} // Fim
+			start={{ x: 1, y: 0 }}
+			end={{ x: 1, y: 1 }}
 			style={{ flex: 1 }}
 		>
-			<View
-				style={{
-					flex: 1,
-					justifyContent: "center",
-					alignItems: "center",
+			<ScrollView
+				contentContainerStyle={{
+					padding: theme.spacing.d,
+					// flex: 1,
+					gap: theme.spacing.e,
 				}}
 			>
-				<Text variant="bodySm" color="text">
-					caralho AAAAAAAAA muito zika.
-				</Text>
-			</View>
+				<View>
+					<Text
+						variant="h1"
+						style={{
+							fontFamily: theme.fonts.hostGrotesk.italic,
+						}}
+					>
+						Bem-vindo,
+					</Text>
+					<Text variant="h1">Matheus</Text>
+					<Text variant="p" color="text">
+						caralho AAAAAAAAA muito zika.
+					</Text>
+				</View>
+				<View style={styles.weatherRow}>
+					<View style={{ transform: [{ rotate: "-100deg" }] }}>
+						<AntDesign
+							name="moon"
+							size={32}
+							color={theme.colors.primary}
+						/>
+					</View>
+
+					<Text variant="h1" style={{ fontSize: 36 }}>
+						19℃
+					</Text>
+				</View>
+				<View>
+					<Text variant="h6" color="text">
+						partes terças do dia vem aqui
+					</Text>
+				</View>
+
+				<View>
+					<Text variant="h2">Rotinas</Text>
+
+					<Text variant="h4" color="text">
+						rotinas aqui
+					</Text>
+				</View>
+			</ScrollView>
 		</LinearGradient>
 	);
 }
+
+const styles = StyleSheet.create({
+	weatherRow: {
+		flexDirection: "row",
+		alignItems: "center",
+		gap: theme.spacing.b, // <-- Ajuste aqui o espaçamento entre o ícone e o texto (ex: theme.spacing.sm ou md)
+	},
+});
