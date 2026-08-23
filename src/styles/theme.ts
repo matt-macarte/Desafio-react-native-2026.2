@@ -15,7 +15,7 @@ export const theme = {
 		bgGradient: ["#0E182C", "#2E5092"] as const,
 	},
 
-	spacing: { sm: 8, md: 16, lg: 24 },
+	spacing: { a: 4, b: 8, c: 16, d: 24, e: 32 },
 
 	fonts: {
 		hostGrotesk: {
@@ -25,7 +25,7 @@ export const theme = {
 			bold: "HostGrotesk-Bold",
 		},
 		quicksand: {
-			italic: "Quicksand-Italic",
+			italic: "Quicksand-Light",
 			regular: "Quicksand-Regular",
 			medium: "Quicksand-Medium",
 			bold: "Quicksand-Bold",
@@ -33,43 +33,47 @@ export const theme = {
 	},
 
 	typography: {
-		// Títulos usando Host Grotesk
-		headingLg: {
+		title: {
 			fontFamily: "HostGrotesk-Bold",
-			fontSize: 28,
-			lineHeight: 34,
+			fontSize: 36,
+			lineHeight: 44,
 		},
-		headingMd: {
+		h1: {
 			fontFamily: "HostGrotesk-Bold",
-			fontSize: 22,
-			lineHeight: 28,
+			fontSize: 42,
+			lineHeight: 50,
 		},
-		headingSm: {
+		h2: {
 			fontFamily: "HostGrotesk-Bold",
-			fontSize: 18,
-			lineHeight: 24,
+			fontSize: 36,
+			lineHeight: 44,
+		},
+		h3: {
+			fontFamily: "HostGrotesk-Bold",
+			fontSize: 30,
+			lineHeight: 38,
 		},
 
-		// Textos de corpo e ações usando Quicksand
-		bodyLg: {
-			fontFamily: "Quicksand-Medium",
-			fontSize: 18,
-			lineHeight: 24,
+		// --- Quicksand (H4 em diante) ---
+		h4: {
+			fontFamily: "Quicksand-Bold",
+			fontSize: 24,
+			lineHeight: 30,
 		},
-		bodyMd: {
+		h5: {
+			fontFamily: "Quicksand-Bold",
+			fontSize: 20,
+			lineHeight: 26,
+		},
+		p: {
 			fontFamily: "Quicksand-Regular",
 			fontSize: 16,
 			lineHeight: 22,
 		},
-		bodySm: {
-			fontFamily: "Quicksand-Regular",
+		h6: {
+			fontFamily: "Quicksand-Light",
 			fontSize: 14,
 			lineHeight: 18,
-		},
-		caption: {
-			fontFamily: "Quicksand-Medium",
-			fontSize: 12,
-			lineHeight: 16,
 		},
 	},
 };
