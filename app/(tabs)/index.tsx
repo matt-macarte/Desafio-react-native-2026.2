@@ -1,3 +1,4 @@
+import { RoutineCard } from "@/src/components/Routine";
 import { Text } from "@/src/components/Text";
 import { theme } from "@/src/styles/theme";
 import { AntDesign } from "@expo/vector-icons";
@@ -29,9 +30,7 @@ export default function Index() {
 						Bem-vindo,
 					</Text>
 					<Text variant="h1">Matheus</Text>
-					<Text variant="p" color="text">
-						caralho AAAAAAAAA muito zika.
-					</Text>
+					<Text variant="p">caralho AAAAAAAAA muito zika.</Text>
 				</View>
 				<View style={styles.weatherRow}>
 					<View style={{ transform: [{ rotate: "-100deg" }] }}>
@@ -47,18 +46,15 @@ export default function Index() {
 					</Text>
 				</View>
 				<View>
-					<Text variant="h6" color="text">
-						partes terças do dia vem aqui
-					</Text>
+					<Text variant="h6">partes terças do dia vem aqui</Text>
 				</View>
 
 				<View>
 					<Text variant="h2">Rotinas</Text>
 
-					<Text variant="h4" color="text">
-						rotinas aqui
-					</Text>
+					<Text variant="h4">rotinas aqui</Text>
 				</View>
+				<RoutineCard name="Acordar" time="07:00" />
 			</ScrollView>
 		</LinearGradient>
 	);
@@ -68,6 +64,6 @@ const styles = StyleSheet.create({
 	weatherRow: {
 		flexDirection: "row",
 		alignItems: "center",
-		gap: theme.spacing.b, // <-- Ajuste aqui o espaçamento entre o ícone e o texto (ex: theme.spacing.sm ou md)
+		gap: theme.spacing.b,
 	},
 });
