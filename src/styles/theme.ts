@@ -2,7 +2,9 @@ export const theme = {
 	colors: {
 		background: "#0E182C",
 
-		card: "#FBF5E9",
+		card: "#1b4ca019",
+		cardShadow: "#0E182C6b",
+
 		primary: "#E0E06E",
 		secondary: "#1B4BA0",
 
@@ -16,6 +18,10 @@ export const theme = {
 	},
 
 	spacing: { a: 4, b: 8, c: 16, d: 24, e: 32 },
+
+	borderRadius: { s: 4, m: 8, l: 16 },
+
+	iconSize: { s: 16, m: 24, l: 32 },
 
 	fonts: {
 		hostGrotesk: {
