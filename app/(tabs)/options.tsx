@@ -1,6 +1,5 @@
-import { Text } from "@/src/components/Text";
-import { theme } from "@/src/styles/theme";
-import { ScrollView, View } from "react-native";
+import { theme, txtStyles } from "@/src/styles/theme";
+import { ScrollView, Text, View } from "react-native";
 
 export default function Options() {
 	return (
@@ -13,9 +12,9 @@ export default function Options() {
 			}}
 		>
 			<View>
-				<Text variant="h1">Configurações</Text>
+				<Text style={txtStyles.h1}>Configurações</Text>
 
-				<Text variant="p">omg hiii</Text>
+				<Text style={txtStyles.p}>omg hiii</Text>
 			</View>
 		</ScrollView>
 	);

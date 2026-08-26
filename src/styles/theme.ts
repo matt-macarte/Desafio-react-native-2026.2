@@ -21,7 +21,7 @@ export const theme = {
 
 	borderRadius: { s: 4, m: 8, l: 16 },
 
-	iconSize: { s: 16, m: 24, l: 32 },
+	iconSize: { ss: 16, s: 20, m: 24, l: 32 },
 
 	fonts: {
 		hostGrotesk: {
@@ -37,52 +37,66 @@ export const theme = {
 			bold: "Quicksand-Bold",
 		},
 	},
+};
 
-	typography: {
-		title: {
-			fontFamily: "HostGrotesk-Bold",
-			fontSize: 36,
-			lineHeight: 44,
-		},
-		h1: {
-			fontFamily: "HostGrotesk-Bold",
-			fontSize: 42,
-			lineHeight: 50,
-		},
-		h2: {
-			fontFamily: "HostGrotesk-Bold",
-			fontSize: 36,
-			lineHeight: 44,
-		},
-		h3: {
-			fontFamily: "HostGrotesk-Bold",
-			fontSize: 30,
-			lineHeight: 38,
-		},
+export const txtStyles = {
+	title: {
+		fontFamily: "HostGrotesk-Bold",
+		fontSize: 36,
+		lineHeight: 44,
+		color: theme.colors.text,
+	},
+	h1: {
+		fontFamily: "HostGrotesk-Bold",
+		fontSize: 42,
+		lineHeight: 50,
+		color: theme.colors.text,
+	},
+	h2: {
+		fontFamily: "HostGrotesk-Bold",
+		fontSize: 36,
+		lineHeight: 44,
+		color: theme.colors.text,
+	},
+	h3: {
+		fontFamily: "HostGrotesk-Bold",
+		fontSize: 30,
+		lineHeight: 38,
+		color: theme.colors.text,
+	},
 
-		// --- Quicksand (H4 em diante) ---
-		h4: {
-			fontFamily: "Quicksand-Bold",
-			fontSize: 24,
-			lineHeight: 30,
-		},
-		h5: {
-			fontFamily: "Quicksand-Bold",
-			fontSize: 20,
-			lineHeight: 26,
-		},
-		p: {
-			fontFamily: "Quicksand-Regular",
-			fontSize: 16,
-			lineHeight: 22,
-		},
-		h6: {
-			fontFamily: "Quicksand-Light",
-			fontSize: 14,
-			lineHeight: 18,
-		},
+	// --- Quicksand ---
+	h4: {
+		fontFamily: "Quicksand-Bold",
+		fontSize: 24,
+		lineHeight: 30,
+		color: theme.colors.text,
+	},
+	h5: {
+		fontFamily: "Quicksand-Bold",
+		fontSize: 20,
+		lineHeight: 26,
+		color: theme.colors.text,
+	},
+	h6: {
+		fontFamily: "Quicksand-Regular",
+		fontSize: 14,
+		lineHeight: 18,
+		color: theme.colors.text,
+	},
+	p: {
+		fontFamily: "Quicksand-Medium",
+		fontSize: 16,
+		lineHeight: 22,
+		color: theme.colors.text,
+	},
+	p2: {
+		fontFamily: "Quicksand-Bold",
+		fontSize: 16,
+		lineHeight: 22,
+		color: theme.colors.text,
 	},
 };
 
-export type Theme = typeof theme;
-export type TypographyVariant = keyof typeof theme.typography;
+// export type Theme = typeof theme;
+// export type TypographyVariant = keyof typeof txtStyles;

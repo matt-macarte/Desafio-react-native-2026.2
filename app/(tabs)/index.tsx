@@ -1,9 +1,8 @@
 import { RoutineCard } from "@/src/components/Routine";
-import { Text } from "@/src/components/Text";
-import { theme } from "@/src/styles/theme";
+import { theme, txtStyles } from "@/src/styles/theme";
 import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
 	return (
@@ -13,57 +12,70 @@ export default function Index() {
 			end={{ x: 1, y: 1 }}
 			style={{ flex: 1 }}
 		>
-			<ScrollView
-				contentContainerStyle={{
-					padding: theme.spacing.d,
-					// flex: 1,
-					gap: theme.spacing.e,
-				}}
-			>
-				<View>
-					<Text
-						variant="h1"
-						style={{
-							fontFamily: theme.fonts.hostGrotesk.italic,
-						}}
-					>
-						Bem-vindo,
-					</Text>
-					<Text variant="h1">Matheus</Text>
-					<Text variant="p">caralho AAAAAAAAA muito zika.</Text>
+			<ScrollView contentContainerStyle={styles.page}>
+				<View style={styles.welcomeText}>
+					<Text style={txtStyles.h1}>Bem-vindo,</Text>
+					<Text style={txtStyles.h1}>Matheus</Text>
 				</View>
-				<View style={styles.weatherRow}>
-					<View style={{ transform: [{ rotate: "-100deg" }] }}>
-						<AntDesign
-							name="moon"
-							size={32}
-							color={theme.colors.primary}
-						/>
+				<View style={styles.dayInfoContainer}>
+					<View style={styles.weatherRow}>
+						<View style={{ transform: [{ rotate: "-100deg" }] }}>
+							<AntDesign
+								name="moon"
+								size={56}
+								color={theme.colors.primary}
+							/>
+						</View>
+
+						<Text style={txtStyles.h2}>19°C</Text>
 					</View>
+					<View style={styles.dayRow}>
+						<Text style={[txtStyles.p2, { fontSize: 18 }]}>
+							Segunda-feira, 23 de agosto de 2026
+						</Text>
+					</View>
+				</View>
 
-					<Text variant="h1" style={{ fontSize: 36 }}>
-						19℃
+				{/* <View>
+					<Text style={txtStyles.p}>
+						partes terças do dia vem aqui
 					</Text>
-				</View>
-				<View>
-					<Text variant="h6">partes terças do dia vem aqui</Text>
-				</View>
+				</View> */}
 
 				<View>
-					<Text variant="h2">Rotinas</Text>
-
-					<Text variant="h4">rotinas aqui</Text>
+					<Text style={txtStyles.h3}>Rotinas</Text>
 				</View>
-				<RoutineCard name="Acordar" time="07:00" />
+				<RoutineCard name="Acordar" time="07" />
+				<RoutineCard name="Calistenia" time="30" />
 			</ScrollView>
 		</LinearGradient>
 	);
 }
 
 const styles = StyleSheet.create({
+	page: {
+		padding: theme.spacing.d,
+		gap: theme.spacing.d,
+	},
+	welcomeText: {
+		gap: theme.spacing.c,
+	},
+	dayInfoContainer: {
+		padding: theme.spacing.e,
+		alignItems: "center",
+		gap: theme.spacing.c,
+	},
 	weatherRow: {
 		flexDirection: "row",
 		alignItems: "center",
 		gap: theme.spacing.b,
+		padding: theme.spacing.b,
+		width: "100%",
+	},
+	dayRow: {
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
+		width: "100%",
 	},
 });

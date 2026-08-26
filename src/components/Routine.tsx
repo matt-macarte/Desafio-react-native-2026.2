@@ -1,9 +1,9 @@
 import { Button } from "@/src/components/Button";
-import { Text } from "@/src/components/Text";
-import { AntDesign } from "@expo/vector-icons";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { theme } from "../styles/theme";
+import { StyleSheet, Text, View } from "react-native";
+import { theme, txtStyles } from "../styles/theme";
 import { CANONICAL_HOURS } from "./Globals";
 
 export const RoutineCard = ({
@@ -18,15 +18,30 @@ export const RoutineCard = ({
 	return (
 		<View style={styles.container}>
 			<View style={styles.content}>
-				<Text variant="h4">{name}</Text>
-				<IconText
-					variant="p"
-					info={time ? time : "0:00"}
-					icon="clock-circle"
-					type="primary"
-				/>
+				<Text style={txtStyles.h4}>{name}</Text>
+				<View style={styles.time}>
+					<AntDesign
+						name="clock-circle"
+						size={theme.iconSize.s}
+						color={theme.colors.primary}
+					/>
+					<Text
+						style={[txtStyles.p2, { color: theme.colors.primary }]}
+					>
+						{time ? time + "min" : "0 min"}
+					</Text>
+				</View>
 			</View>
-			<Button variant="icon" title="" icon="play" onPress={() => {}} />
+			<Button
+				label={
+					<FontAwesome
+						name="play"
+						size={theme.iconSize.l}
+						color={theme.colors.text}
+					/>
+				}
+				onPress={() => {}}
+			/>
 		</View>
 	);
 };
@@ -44,40 +59,12 @@ const styles = StyleSheet.create({
 	content: {
 		gap: theme.spacing.b,
 	},
+	time: {
+		flexDirection: "row",
+		alignItems: "center",
+		gap: theme.spacing.b,
+	},
 });
-
-export const IconText = ({
-	icon,
-	variant,
-	info,
-	type,
-}: {
-	icon: keyof typeof AntDesign.glyphMap;
-	variant: keyof typeof theme.typography;
-	info: string;
-	type?: "primary" | "secondary";
-}) => {
-	const cor = type ? theme.colors[type] : theme.colors.text;
-
-	return (
-		<View
-			style={{
-				flexDirection: "row",
-				alignItems: "center",
-				gap: theme.spacing.b,
-			}}
-		>
-			<AntDesign name={icon} size={theme.iconSize.s} color={cor} />
-			<Text
-				variant={variant}
-				style={{ alignItems: "center" }}
-				color={cor}
-			>
-				{info}
-			</Text>
-		</View>
-	);
-};
 
 export const Action = ({
 	name,
@@ -88,8 +75,8 @@ export const Action = ({
 }) => {
 	return (
 		<View>
-			<Text variant="p">{name}</Text>
-			<Text variant="p">{duration}</Text>
+			<Text style={txtStyles.h4}>{name}</Text>
+			<Text style={txtStyles.p}>{duration}</Text>
 		</View>
 	);
 };

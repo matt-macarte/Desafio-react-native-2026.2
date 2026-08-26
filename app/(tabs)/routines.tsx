@@ -1,7 +1,6 @@
-import { Text } from "@/src/components/Text";
-import { theme } from "@/src/styles/theme";
+import { theme, txtStyles } from "@/src/styles/theme";
 import { Feather } from "@expo/vector-icons";
-import { ScrollView, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 
 export default function Routines() {
 	return (
@@ -14,13 +13,13 @@ export default function Routines() {
 			}}
 		>
 			<View>
-				<Text variant="h1">Rotinas</Text>
+				<Text style={txtStyles.h1}>Rotinas</Text>
 
-				<Text variant="p">Todas suas rotinas aqui</Text>
+				<Text style={txtStyles.p}>Todas suas rotinas aqui</Text>
 			</View>
 			<View>
 				<Feather name="moon" size={18} color={theme.colors.primary} />
-				<Text variant="p">Todas suas rotinas aqui</Text>
+				<Text style={txtStyles.p}>Todas suas rotinas aqui</Text>
 			</View>
 		</ScrollView>
 	);
