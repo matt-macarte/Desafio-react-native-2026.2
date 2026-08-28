@@ -1,3 +1,4 @@
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import React from "react";
 import {
 	StyleSheet,
@@ -7,16 +8,49 @@ import {
 } from "react-native";
 import { theme, txtStyles } from "../styles/theme";
 
-type ButtonProps = TouchableOpacityProps & { label?: string | React.ReactNode };
+type ButtonProps = TouchableOpacityProps & {
+	name?: keyof typeof MaterialIcons.glyphMap;
+	label?: string | React.ReactNode;
+	color?: string;
+};
 
-export function Button({ label, ...rest }: ButtonProps) {
+export function ButtonIcon({ name, label, ...rest }: ButtonProps) {
 	return (
 		<TouchableOpacity
 			activeOpacity={0.7}
 			{...rest}
 			style={styles.container}
 		>
-			{label ? <Text style={txtStyles.h4}>{label}</Text> : null}
+			{name ? (
+				<MaterialIcons
+					name={name}
+					size={32}
+					color={theme.colors.text}
+				/>
+			) : null}
+			{label ? <Text style={txtStyles.p1}>{label}</Text> : null}
+		</TouchableOpacity>
+	);
+}
+
+export function SimpleButtonIcon({
+	color = theme.colors.text,
+	name,
+	label,
+	...rest
+}: ButtonProps) {
+	return (
+		<TouchableOpacity
+			activeOpacity={0.7}
+			{...rest}
+			style={[styles.containerSimple]}
+		>
+			{name ? (
+				<MaterialIcons name={name} size={32} color={color} />
+			) : null}
+			{label ? (
+				<Text style={[txtStyles.p1, { color }]}>{label}</Text>
+			) : null}
 		</TouchableOpacity>
 	);
 }
@@ -29,6 +63,11 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "center",
+		gap: theme.spacing.b,
+	},
+	containerSimple: {
+		flexDirection: "row",
+		alignItems: "center",
 		gap: theme.spacing.b,
 	},
 });
