@@ -1,7 +1,5 @@
-import { Button } from "@/src/components/Button";
+import { ButtonIcon } from "@/src/components/Button";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { theme, txtStyles } from "../styles/theme";
 import { CANONICAL_HOURS } from "./Globals";
@@ -32,16 +30,7 @@ export const RoutineCard = ({
 					</Text>
 				</View>
 			</View>
-			<Button
-				label={
-					<FontAwesome
-						name="play"
-						size={theme.iconSize.l}
-						color={theme.colors.text}
-					/>
-				}
-				onPress={() => {}}
-			/>
+			<ButtonIcon name="play-arrow" />
 		</View>
 	);
 };
