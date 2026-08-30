@@ -7,10 +7,13 @@ export const theme = {
 
 		primary: "#E0E06E",
 		secondary: "#1B4BA0",
+		secondary50: "#1B4BA080",
+		secondary25: "#1B4BA040",
+		secondary10: "#1B4BA00A",
 
 		text: "#FBF5E9",
 		textSecondary: "#2828b6",
-		muted: "#A8A8B3",
+		muted: "#FBF5E9CC",
 
 		danger: "#FF5D48",
 	},
@@ -21,7 +24,7 @@ export const theme = {
 
 	spacing: { a: 4, b: 8, c: 16, d: 24, e: 32, f: 40, g: 48 },
 
-	borderRadius: { s: 4, m: 8, l: 16 },
+	borderRadius: { s: 4, m: 8, l: 12, xl: 32 },
 
 	iconSize: { ss: 16, s: 20, m: 24, l: 32 },
 
@@ -121,12 +124,16 @@ export const txtStyles = {
 		lineHeight: 30,
 		color: theme.colors.text,
 	},
+	link: {
+		color: theme.colors.primary,
+		textDecorationLine: "underline",
+	},
 };
 
 export const layouts = {
 	dadContainer: {
 		backgroundColor: theme.colors.background,
-		padding: theme.spacing.e,
+		paddingHorizontal: theme.spacing.e,
 		paddingTop: 60,
 		paddingBottom: 60,
 	},
