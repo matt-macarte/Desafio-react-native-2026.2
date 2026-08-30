@@ -1,58 +1,62 @@
 {
-  "expo": {
-    "name": "Desafio-react-native-2026-2",
-    "slug": "rotineiro",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "desafioreactnative20252",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.macsmacs.rotineiro",
-      "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
-      }
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "package": "com.macsmacs.rotineiro"
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ],
-      "expo-font",
-      "expo-image",
-      "expo-status-bar",
-      "expo-web-browser"
-    ],
-    "experiments": {
-      "typedRoutes": true
-    },
-    "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "c1dc4f6b-3127-4dfc-8687-8ca13642fb8b"
-      }
-    },
-    "owner": "macs-macs"
-  }
+	"expo": {
+		"name": "Desafio-react-native-2026-2",
+		"slug": "rotineiro",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"scheme": "desafioreactnative20252",
+		"userInterfaceStyle": "dark",
+		"backgroundColor": "#0E182C",
+		"newArchEnabled": true,
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.macsmacs.rotineiro",
+			"backgroundColor": "#0E182C",
+			"infoPlist": {
+				"ITSAppUsesNonExemptEncryption": false
+			}
+		},
+		"android": {
+			"backgroundColor": "#0E182C",
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/images/adaptive-icon.png",
+				"backgroundColor": "#0E182C"
+			},
+			"edgeToEdgeEnabled": true,
+			"package": "com.macsmacs.rotineiro"
+		},
+		"web": {
+			"bundler": "metro",
+			"output": "static",
+			"favicon": "./assets/images/favicon.png",
+			"backgroundColor": "#0E182C"
+		},
+		"plugins": [
+			"expo-router",
+			[
+				"expo-splash-screen",
+				{
+					"image": "./assets/images/splash-icon.png",
+					"imageWidth": 200,
+					"resizeMode": "contain",
+					"backgroundColor": "#0E182C"
+				}
+			],
+			"expo-font",
+			"expo-image",
+			"expo-status-bar",
+			"expo-web-browser"
+		],
+		"experiments": {
+			"typedRoutes": true
+		},
+		"extra": {
+			"router": {},
+			"eas": {
+				"projectId": "c1dc4f6b-3127-4dfc-8687-8ca13642fb8b"
+			}
+		},
+		"owner": "macs-macs"
+	}
 }
