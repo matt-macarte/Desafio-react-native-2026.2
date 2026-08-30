@@ -1,4 +1,4 @@
-import { SimpleButtonIcon } from "@/src/components/Button";
+import { Button } from "@/src/components/Button";
 import { layouts, theme, txtStyles } from "@/src/styles/theme";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
@@ -34,35 +34,31 @@ export default function Options() {
 			<View style={styles.optionsContainer}>
 				<View style={styles.options}>
 					<Text style={txtStyles.h2}>Opções</Text>
-					<SimpleButtonIcon
+					<Button
 						style={styles.btn}
 						label="Editar Perfil"
 						name="person"
 					/>
-					<SimpleButtonIcon
+					<Button
 						style={styles.btn}
 						label="Preferências"
 						name="settings"
 					/>
-					<SimpleButtonIcon
+					<Button
 						style={styles.btn}
 						label="Gerenciar Ações"
 						name="dashboard"
 					/>
 				</View>
 
-				<SimpleButtonIcon
+				<Button
 					style={styles.btn}
 					label="Sair"
 					name="logout"
 					color={theme.colors.danger}
 				/>
 				<View>
-					<SimpleButtonIcon
-						style={styles.btn}
-						label="Sobre"
-						name="info"
-					/>
+					<Button style={styles.btn} label="Sobre" name="info" />
 					<Text style={txtStyles.sub}>Versão 0.0.8 alpha</Text>
 				</View>
 			</View>
