@@ -73,8 +73,8 @@ export function Button({
 
 const styles = StyleSheet.create({
 	container: {
-		paddingVertical: theme.spacing.b,
-		paddingHorizontal: theme.spacing.c,
+		// paddingVertical: theme.spacing.b,
+		// paddingHorizontal: theme.spacing.c,
 
 		flexDirection: "row",
 		alignItems: "center",

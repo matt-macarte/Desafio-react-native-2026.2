@@ -1,3 +1,4 @@
+import { theme } from "@/src/styles/theme";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -39,7 +40,12 @@ export default function RootLayout() {
 
 	return (
 		<SafeAreaProvider>
-			<Stack screenOptions={{ headerShown: false }} />
+			<Stack
+				screenOptions={{
+					headerShown: false,
+					contentStyle: { backgroundColor: theme.colors.background },
+				}}
+			/>
 		</SafeAreaProvider>
 	);
 }
