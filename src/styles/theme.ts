@@ -112,6 +112,15 @@ export const txtStyles = {
 		// fontWeight: "400",
 		color: theme.colors.text,
 	},
+
+	// bagunca
+
+	btn: {
+		fontFamily: "Quicksand-SemiBold",
+		fontSize: 24,
+		lineHeight: 30,
+		color: theme.colors.text,
+	},
 };
 
 export const layouts = {
@@ -119,6 +128,7 @@ export const layouts = {
 		backgroundColor: theme.colors.background,
 		padding: theme.spacing.e,
 		paddingTop: 60,
+		paddingBottom: 60,
 	},
 };
 
