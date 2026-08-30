@@ -114,5 +114,13 @@ export const txtStyles = {
 	},
 };
 
+export const layouts = {
+	dadContainer: {
+		backgroundColor: theme.colors.background,
+		padding: theme.spacing.e,
+		paddingTop: 60,
+	},
+};
+
 // export type Theme = typeof theme;
 // export type TypographyVariant = keyof typeof txtStyles;

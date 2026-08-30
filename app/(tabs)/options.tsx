@@ -1,19 +1,22 @@
 import { SimpleButtonIcon } from "@/src/components/Button";
-import { theme, txtStyles } from "@/src/styles/theme";
+import { layouts, theme, txtStyles } from "@/src/styles/theme";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function Options() {
 	return (
 		<ScrollView
-			contentContainerStyle={{
-				backgroundColor: theme.colors.background,
-				padding: theme.spacing.d,
-				flex: 1,
-				flexGrow: 1,
-				gap: theme.spacing.f,
-			}}
+			contentContainerStyle={[
+				layouts.dadContainer,
+				{
+					// backgroundColor: theme.colors.background,
+					// padding: theme.spacing.d,
+					flex: 1,
+					flexGrow: 1,
+					gap: theme.spacing.f,
+				},
+			]}
 		>
-			<View style={styles.header}>
+			<View>
 				<Text style={txtStyles.h1}>Menu</Text>
 			</View>
 			<View style={styles.user}>
@@ -68,9 +71,9 @@ export default function Options() {
 }
 
 const styles = StyleSheet.create({
-	header: {
-		paddingTop: 32,
-	},
+	// header: {
+	// 	paddingTop: 32,
+	// },
 	user: {
 		gap: theme.spacing.d,
 		flexDirection: "row",

@@ -1,5 +1,5 @@
 import { RoutineCard } from "@/src/components/Routine";
-import { theme, txtStyles } from "@/src/styles/theme";
+import { layouts, theme, txtStyles } from "@/src/styles/theme";
 import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
@@ -10,7 +10,7 @@ export default function Index() {
 			colors={theme.gradients.bgGradient}
 			start={{ x: 1, y: 0 }}
 			end={{ x: 1, y: 1 }}
-			style={{ flex: 1 }}
+			style={[layouts.dadContainer, { flex: 1 }]}
 		>
 			<ScrollView contentContainerStyle={styles.page}>
 				<View style={styles.welcomeText}>
@@ -54,8 +54,9 @@ export default function Index() {
 
 const styles = StyleSheet.create({
 	page: {
-		padding: theme.spacing.d,
+		// padding: theme.spacing.d,
 		gap: theme.spacing.d,
+		backgroundColor: "none",
 	},
 	welcomeText: {
 		gap: theme.spacing.c,

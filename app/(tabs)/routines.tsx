@@ -1,5 +1,5 @@
 import { RoutineCard } from "@/src/components/Routine";
-import { theme, txtStyles } from "@/src/styles/theme";
+import { layouts, theme, txtStyles } from "@/src/styles/theme";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
 export default function Routines() {
@@ -10,7 +10,7 @@ export default function Routines() {
 
 	return (
 		<>
-			<View style={styles.viewContainer}>
+			<View style={[layouts.dadContainer, styles.viewContainer]}>
 				<Text style={txtStyles.h1}>Rotinas</Text>
 				<Text style={txtStyles.h3}>Todas Rotinas</Text>
 
@@ -32,7 +32,6 @@ export default function Routines() {
 
 const styles = StyleSheet.create({
 	viewContainer: {
-		padding: theme.spacing.d,
 		gap: theme.spacing.b,
 		marginBottom: theme.spacing.e,
 		backgroundColor: theme.colors.background,
