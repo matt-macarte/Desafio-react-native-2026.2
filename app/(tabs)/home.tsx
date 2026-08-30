@@ -4,7 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+export default function Home() {
 	return (
 		<LinearGradient
 			colors={theme.gradients.bgGradient}
