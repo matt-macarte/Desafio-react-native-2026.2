@@ -1,6 +1,7 @@
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import React from "react";
 import {
+	StyleProp,
 	StyleSheet,
 	Text,
 	TouchableOpacity,
@@ -13,6 +14,7 @@ type ButtonProps = TouchableOpacityProps & {
 	label?: string | React.ReactNode;
 	color?: string;
 	bgColor?: string;
+	style?: StyleProp<ButtonProps> | undefined;
 };
 
 export function ButtonIcon({
@@ -20,13 +22,14 @@ export function ButtonIcon({
 	name,
 	label,
 	bgColor,
+	style,
 	...rest
 }: ButtonProps) {
 	return (
 		<TouchableOpacity
 			activeOpacity={0.7}
 			{...rest}
-			style={[styles.container, { backgroundColor: bgColor }]}
+			style={[styles.container, { backgroundColor: bgColor }, style]}
 		>
 			{name ? (
 				<MaterialIcons name={name} size={32} color={color} />
@@ -43,13 +46,18 @@ export function Button({
 	name,
 	label,
 	bgColor = theme.colors.primary,
+	style,
 	...rest
 }: ButtonProps) {
 	return (
 		<TouchableOpacity
 			activeOpacity={0.7}
 			{...rest}
-			style={[styles.containerSimple, { backgroundColor: bgColor }]}
+			style={[
+				styles.containerSimple,
+				{ backgroundColor: bgColor },
+				style,
+			]}
 		>
 			{name ? (
 				<MaterialIcons name={name} size={32} color={color} />
@@ -62,6 +70,7 @@ export function Button({
 						bgColor == "transparent"
 							? { textDecorationLine: "underline" }
 							: {},
+						style,
 					]}
 				>
 					{label}

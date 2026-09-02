@@ -30,7 +30,7 @@ export const RoutineCard = ({
 					</Text>
 				</View>
 			</View>
-			<ButtonIcon name="play-arrow" />
+			<ButtonIcon name="play-arrow" color={theme.colors.text} />
 		</View>
 	);
 };

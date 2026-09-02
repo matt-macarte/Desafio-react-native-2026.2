@@ -38,16 +38,19 @@ export default function Options() {
 						style={styles.btn}
 						label="Editar Perfil"
 						name="person"
+						color={theme.colors.text}
 					/>
 					<Button
 						style={styles.btn}
 						label="Preferências"
 						name="settings"
+						color={theme.colors.text}
 					/>
 					<Button
 						style={styles.btn}
 						label="Gerenciar Ações"
 						name="dashboard"
+						color={theme.colors.text}
 					/>
 				</View>
 
@@ -58,7 +61,12 @@ export default function Options() {
 					color={theme.colors.danger}
 				/>
 				<View>
-					<Button style={styles.btn} label="Sobre" name="info" />
+					<Button
+						style={styles.btn}
+						label="Sobre"
+						name="info"
+						color={theme.colors.primary}
+					/>
 					<Text style={txtStyles.sub}>Versão 0.0.8 alpha</Text>
 				</View>
 			</View>
@@ -115,11 +123,15 @@ const styles = StyleSheet.create({
 		gap: theme.spacing.c,
 	},
 	btn: {
-		gap: theme.spacing.c,
+		// gap: theme.spacing.c,
 		flexDirection: "row",
-		alignItems: "flex-start",
+		paddingHorizontal: 0,
+
+		// alignItems: "flex-start",
 		justifyContent: "flex-start",
-		width: "100%",
+		backgroundColor: "transparent",
+
+		// width: "100%",
 		// height: "auto",
 	},
 	about: {
