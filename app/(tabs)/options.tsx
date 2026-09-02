@@ -48,13 +48,14 @@ export default function Options() {
                         label="Preferências"
                         name="settings"
                         color={theme.colors.text}
+                        onPress={() => router.push("/app-preferences")}
                     />
-                    <Button
+                    {/* <Button
                         style={styles.btn}
                         label="Gerenciar Ações"
                         name="dashboard"
                         color={theme.colors.text}
-                    />
+                    /> */}
                 </View>
 
                 <Button
@@ -102,7 +103,8 @@ const styles = StyleSheet.create({
     },
     // baixo
     optionsContainer: {
-        gap: "48",
+        gap: 48,
+        // height: "100%",
     },
     options: {
         gap: theme.spacing.c,
