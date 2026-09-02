@@ -70,6 +70,7 @@ export default function Options() {
                         label="Sobre"
                         name="info"
                         color={theme.colors.primary}
+                        onPress={() => router.push("/about")}
                     />
                     <Text style={txtStyles.sub}>Versão 0.0.8 alpha</Text>
                 </View>

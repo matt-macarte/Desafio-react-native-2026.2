@@ -120,6 +120,13 @@ export const txtStyles = {
         // fontWeight: "400",
         color: theme.colors.text,
     },
+    subsub: {
+        fontFamily: "Quicksand-Light",
+        fontSize: 14,
+        lineHeight: 20,
+        // fontWeight: "400",
+        color: theme.colors.text,
+    },
 
     // bagunca
 
