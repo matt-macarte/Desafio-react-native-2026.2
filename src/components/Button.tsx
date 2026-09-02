@@ -70,7 +70,6 @@ export function Button({
 						bgColor == "transparent"
 							? { textDecorationLine: "underline" }
 							: {},
-						style,
 					]}
 				>
 					{label}
