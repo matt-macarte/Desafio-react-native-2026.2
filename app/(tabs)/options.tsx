@@ -41,7 +41,7 @@ export default function Options() {
                         label="Editar Perfil"
                         name="person"
                         color={theme.colors.text}
-                        onPress={() => router.push("/UserProfile")}
+                        onPress={() => router.push("/user-profile")}
                     />
                     <Button
                         style={styles.btn}
