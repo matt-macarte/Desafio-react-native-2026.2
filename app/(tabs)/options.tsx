@@ -75,9 +75,6 @@ export default function Options() {
 }
 
 const styles = StyleSheet.create({
-	// header: {
-	// 	paddingTop: 32,
-	// },
 	user: {
 		gap: theme.spacing.d,
 		flexDirection: "row",
@@ -85,54 +82,34 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		width: "100%",
 		padding: theme.spacing.b,
-		// flexWrap: "wrap",
-		// height: "90",
 	},
 	userPic: {
 		width: 92,
 		height: 92,
 		backgroundColor: theme.colors.primary,
 		borderRadius: 100,
-		// flex: 1,
 	},
 	userName: {
 		fontSize: 22,
-		// fontWeight: "normal",
-		// flexShrink: 1,
-		// flex: 1,
-		// flexWrap: "wrap",
-
-		// width: "100%",
 	},
 	userInfo: {
 		gap: theme.spacing.c,
-		// justifyContent: "space-between",
-		// width: "100%",
-		// height: "100%",
-		// flexWrap: "wrap",
-		// flex: 2,
+
 		flexShrink: 1,
 	},
 	// baixo
 	optionsContainer: {
 		gap: "48",
-		// justifyContent: "space-between",
-		// height: "100%",
 	},
 	options: {
 		gap: theme.spacing.c,
 	},
 	btn: {
-		// gap: theme.spacing.c,
 		flexDirection: "row",
 		paddingHorizontal: 0,
 
-		// alignItems: "flex-start",
 		justifyContent: "flex-start",
 		backgroundColor: "transparent",
-
-		// width: "100%",
-		// height: "auto",
 	},
 	about: {
 		flex: 1,
